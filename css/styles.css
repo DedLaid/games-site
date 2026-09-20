@@ -1,0 +1,329 @@
+/* ===== Общие стили сайта ===== */
+ 
+body {
+    background-color: #1f307c;
+    color: #ffffffbe;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+/* ===== Навигация ===== */
+ 
+.navigation {
+    background-color: #151b4f;
+    list-style-type: none;
+    display: flex;
+    padding: 15px 30px;
+    margin: 0;
+    gap: 30px;
+}
+ 
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+ 
+.navigation a:hover {
+    color: #38BDF8;
+}
+ 
+/* ===== Заголовки ===== */
+ 
+h1 {
+    text-align: center;
+    color: white;
+}
+ 
+h2, h3 {
+    color: white;
+}
+ 
+/* ===== Основной текст ===== */
+ 
+p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+ 
+/* ===== Изображения Tetris ===== */
+ 
+.tetris-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+ 
+.tetris-images img {
+    width: 640px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+ 
+/* ===== Ссылка на игру ===== */
+ 
+.game-link {
+    color: #38BDF8;
+    font-size: 20px;
+}
+ 
+/* ===== Контейнер карточек ===== */
+ 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+ 
+/* ===== Карточка игры ===== */
+ 
+.game-card {
+    background: white;
+    color: #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 6px solid #3498db;
+}
+ 
+/* Наведение мыши на карточку */
+ 
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+    border-left-color: #e74c3c;
+}
+ 
+/* Картинка внутри карточки (для старых статичных карточек на site3.html) */
+ 
+.game-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+ 
+/* Название игры */
+ 
+.game-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+ 
+/* Краткое описание */
+ 
+.game-short {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+ 
+/* ===== Кнопка Подробнее ===== */
+ 
+.details-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+}
+ 
+.details-btn:hover {
+    background: #2980b9;
+    transform: scale(1.02);
+}
+ 
+/* ===== Дополнительная информация ===== */
+ 
+.details {
+    margin-top: 18px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    line-height: 1.6;
+ 
+    /* Скрыто по умолчанию */
+    display: none;
+}
+ 
+.details p {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+ 
+.details strong {
+    color: #2c3e50;
+}
+ 
+/* ===== Страница игры ===== */
+ 
+.game-frame {
+    display: block;
+    width: 85%;
+    max-width: 1400px;
+    height: 700px;
+    margin: 30px auto;
+    border: none;
+    border-radius: 15px;
+}
+ 
+/* ========================================== */
+/* КАРТОЧКИ ИГР (данные из Firestore)        */
+/* ========================================== */
+ 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+ 
+.game-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 6px solid #3498db;
+}
+ 
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.15);
+    border-left-color: #e74c3c;
+}
+ 
+.game-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+ 
+.game-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+ 
+.game-short {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+ 
+.game-rating {
+    font-size: 1rem;
+    color: #e67e22;
+    font-weight: bold;
+}
+ 
+/* Сообщение о загрузке */
+#loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+
+
+
+
+
+
+
+/* ========================================== */
+/* ФОРМА ДОБАВЛЕНИЯ ИГРЫ                      */
+/* ========================================== */
+
+.add-game-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.add-game-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #bdc3c7;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+

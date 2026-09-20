@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tetris</title>
+
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+</head>
+
+<body>
+
+
+<ul class="navigation">
+        <li></li><a href="index.html">Главная</a></li>
+        <li><a href="site2.html">Игры</a></li>
+        <li><a href="site3.html">Контакты</a></li>
+        <li><a href="site4.html">Игры из базы</a></li>
+    </ul>
+
+
+<h1>Tetris</h1>
+
+
+
+<div class="main-content">
+
+    <p>
+        <strong>Тетрис</strong> — это легендарная головоломsssssка,
+        созданная в 1985 году, где нужно собирать линии
+        из падающих блоков.
+    </p>
+
+    <p>
+        Оригинальная игра стала настоящей классикой,
+        но моя версия игры на Unity сделана намного лучше,
+        современнее и красивее старой классики!
+    </p>
+
+</div>
+
+
+
+<div class="tetris-images">
+
+   <img src="image/tetris3.png" alt="Мой Тетрис">
+
+    <img src="image/tetris.jpg" alt="Старый Тетрис">
+
+</div>
+
+
+
+<div class="game-link-container">
+
+    <a class="game-link" href="site2.html">
+        Перейти к игре →
+    </a>
+
+</div>
+
+
+
+<div class="text-section">
+
+    <h2>Фигуры в Тетрисе</h2>
+
+    <ul>
+
+        <li>
+            <strong>Квадрат (O-фигура)</strong> —
+            состоит из 4 блоков и не вращается.
+        </li>
+
+        <li>
+            <strong>Палка (I-фигура)</strong> —
+            незаменима для очистки сразу 4 линий.
+        </li>
+
+        <li>
+            <strong>Т-образная (T-фигура)</strong> —
+            используется для сложных финтов (T-spin).
+        </li>
+
+        <li>
+            <strong>Зигзаги (Z и S-фигуры)</strong> —
+            часто создают неудобства при быстрой игре.
+        </li>
+
+        <li>
+            <strong>Г-образные (L и J-фигуры)</strong> —
+            помогают заполнять углы игрового поля.
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+<div class="text-section">
+
+    <h2>Этапы создания моей игры</h2>
+
+    <ol>
+
+        <li>
+            Разработка идеи, правил игры
+            и создание прототипа.
+        </li>
+
+        <li>
+            Написание кода игровой механики:
+            падение блоков, очистка линий
+            и подсчёт очков.
+        </li>
+
+        <li>
+            Тестирование игры, исправление ошибок,
+            полировка баланса и подготовка релиза.
+        </li>
+
+    </ol>
+
+</div>
+
+
+<!-- Подключение JavaScript -->
+<script src="js/script.js"></script>
+
+
+
+
+
+<!-- Подключение fire,base -->
+<script type="module"> 
+ import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js';
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAx4GtZ1fOh0i_5isXBfpP5cTe13chDy_4",
+  authDomain: "mygamesite-207fa.firebaseapp.com",
+  projectId: "mygamesite-207fa",
+  storageBucket: "mygamesite-207fa.firebasestorage.app",
+  messagingSenderId: "990227201280",
+  appId: "1:990227201280:web:6f95efd3fd3ca9567a07e5"
+};
+
+
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const analytics = getAnalytics(app);
+
+
+
+
+    console.log('✅ Firebase подключен!');
+    console.log('📊 Project ID:', firebaseConfig.projectId);
+    console.log('🔥 Firestore готов к работе!');
+
+
+        window.firebaseConfig = firebaseConfig;
+        window.db = db;
+        window.firebaseReady = true;
+</script>
+
+
+
+
+</body>
+</html>
