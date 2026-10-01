@@ -10,7 +10,7 @@
 <body>
 
     <ul class="navigation">
-       <li></li><a href="index.html">Главная</a></li>
+        <li><a href="site.html">Главная</a></li>
         <li><a href="site2.html">Игры</a></li>
         <li><a href="site3.html">Контакты</a></li>
         <li><a href="site4.html">Игры из базы</a></li>
@@ -122,6 +122,47 @@
         window.db = db;
         window.firebaseReady = true;
     </script>
+
+
+
+
+<!-- ========================================== -->
+<!-- МОДАЛЬНОЕ ОКНО ДЛЯ РЕДАКТИРОВАНИЯ          -->
+<!-- ========================================== -->
+<div class="modal-overlay" id="edit-modal">
+    <div class="modal-window">
+        <h2>✏️ Редактировать игру</h2>
+        
+        <form id="edit-form">
+            <input type="hidden" id="edit-id">
+            
+            <div class="form-group">
+                <label for="edit-title">Название игры:</label>
+                <input type="text" id="edit-title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="edit-genre">Жанр:</label>
+                <input type="text" id="edit-genre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="edit-rating">Рейтинг (0-10):</label>
+                <input type="number" id="edit-rating" min="0" max="10" step="0.1" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="edit-imageUrl">Ссылка на картинку:</label>
+                <input type="url" id="edit-imageUrl">
+            </div>
+            
+            <div class="modal-actions">
+                <button type="button" class="cancel-btn" id="cancel-edit">Отмена</button>
+                <button type="submit" class="save-btn">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
